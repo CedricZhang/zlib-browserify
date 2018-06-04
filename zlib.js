@@ -1,7 +1,8 @@
 /** @license zlib.js 0.1.7 2012 - imaya [ https://github.com/imaya/zlib.js ] The MIT License */ (function() {
   'use strict';
-  process.nextTick = setImmediate;
-  const Buffer = require('buffer/').Buffer;
+  let process = {}
+  process.nextTick = setTimeout;
+  const Buffer = require('buffer').Buffer;
 
   function q(b) {
     throw b;
